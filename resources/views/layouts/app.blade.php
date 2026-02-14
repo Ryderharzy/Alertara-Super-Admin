@@ -27,7 +27,7 @@ require_once app_path('auth-include.php');
     @include('components.sidebar')
 
     <!-- Main Content -->
-    <main class="lg:ml-72 ml-0 lg:mt-16 mt-16 bg-gray-100">
+    <main class="lg:ml-72 ml-0 lg:mt-16 mt-16 min-h-screen bg-gray-100">
         @yield('content')
     </main>
 

@@ -8,7 +8,7 @@ if (request()->query('token')) {
 @extends('layouts.app')
 
 @section('content')
-        <div class="p-6 lg:p-8 pb-0">
+        <div class="p-6 lg:p-8 mb-8">
             <!-- Page Header -->
             <div class="mb-8">
                 <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
