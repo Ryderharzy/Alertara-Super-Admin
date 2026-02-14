@@ -866,5 +866,21 @@
     </div>
 </aside>
 
+<!-- Search Modal -->
+<div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+        <div class="search-modal-input-wrap">
+            <i class="fas fa-search"></i>
+            <input type="text" class="search-modal-input" id="searchModalInput" placeholder="Search..." autocomplete="off">
+            <span class="search-modal-esc" id="searchModalEsc">Esc</span>
+        </div>
+        <div class="search-modal-results" id="searchModalResults"></div>
+        <div class="search-modal-footer">
+            <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> to navigate</span>
+            <span><kbd>&crarr;</kbd> to select</span>
+        </div>
+    </div>
+</div>
+
 <!-- Sidebar JavaScript -->
 <script src="{{ asset('js/sidebar.js') }}"></script>

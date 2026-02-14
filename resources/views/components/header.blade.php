@@ -61,7 +61,7 @@
                         <div class="w-9 h-9 bg-gradient-to-br from-alertara-500 to-alertara-700 rounded-full flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-user text-white text-xs"></i>
                         </div>
-                        <i class="fas fa-chevron-down text-alertara-600 text-xs"></i>
+                        <i class="fas fa-chevron-down text-alertara-600 text-xs flex-shrink-0"></i>
                     </button>
 
                     <!-- Dropdown Menu -->
