@@ -1,4 +1,6 @@
 <?php
+
+use Illuminate\Support\Facades\Log;
 /**
  * JWT Authentication Include File for Laravel
  *
@@ -240,9 +242,16 @@ function getDepartmentName()
         'health_and_safety_department' => 'Health & Safety Department',
         'disaster_preparedness_department' => 'Disaster Preparedness Department',
         'emergency_communication_department' => 'Emergency Communication Department',
+        'all_departments' => 'All Departments',
     ];
 
     $dept = getUserDepartment();
+
+    // For super admin with no specific department
+    if (isSuperAdmin() && empty($dept)) {
+        return 'All Departments';
+    }
+
     return $names[$dept] ?? ucfirst(str_replace('_', ' ', $dept));
 }
 
