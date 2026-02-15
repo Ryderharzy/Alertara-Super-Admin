@@ -40,20 +40,14 @@
                     <button id="profileToggle" class="flex items-center space-x-2 pl-4 border-l border-gray-200 hover:bg-gray-50 rounded py-2 px-2 transition-colors">
                         <div class="text-right hidden sm:block">
                             @php
-                                // Get user from global context or view share
-                                $user = $currentUser ?? $GLOBALS['authenticated_user'] ?? null;
+                                // Check if JWT token exists in session (centralized login)
                                 $jwtToken = session('jwt_token');
-                                $isJwtAuth = !empty($jwtToken) && !empty($user);
+                                $isJwtAuth = !empty($jwtToken);
                             @endphp
-                            @if($isJwtAuth)
+                            @if($isJwtAuth && getUserEmail())
                                 <!-- JWT Auth: Use centralized login data -->
-                                <p class="text-sm font-medium text-alertara-900">{{ $user['email'] ?? 'User' }}</p>
-                                <p class="text-xs text-alertara-500">
-                                    {{ ucfirst(str_replace('_', ' ', $user['role'] ?? 'user')) }}
-                                    @if(!empty($user['department']))
-                                        - {{ getDepartmentName() ?? $user['department'] }}
-                                    @endif
-                                </p>
+                                <p class="text-sm font-medium text-alertara-900">{{ getUserEmail() ?? 'User' }}</p>
+                                <p class="text-xs text-alertara-500">{{ ucfirst(getUserRole() ?? 'User') }} - {{ getDepartmentName() ?? 'Department' }}</p>
                             @elseif(Auth::check())
                                 <!-- Local Auth: Use Laravel's built-in auth -->
                                 <p class="text-sm font-medium text-alertara-900">{{ Auth::user()->full_name ?? Auth::user()->name ?? 'User' }}</p>
@@ -67,7 +61,7 @@
                         <div class="w-9 h-9 bg-gradient-to-br from-alertara-500 to-alertara-700 rounded-full flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-user text-white text-xs"></i>
                         </div>
-                        <i class="fas fa-chevron-down text-alertara-600 text-xs flex-shrink-0"></i>
+                        <i class="fas fa-chevron-down text-alertara-600 text-xs"></i>
                     </button>
 
                     <!-- Dropdown Menu -->
