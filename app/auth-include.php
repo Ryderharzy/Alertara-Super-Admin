@@ -171,6 +171,9 @@ foreach ($debugLog as $log) {
 // Step 7: Make user data globally available
 $GLOBALS['authenticated_user'] = $user;
 
+// Also make available to views via view()->share
+view()->share('currentUser', $user);
+
 // Department name mapping
 $departmentNames = [
     'law_enforcement_department' => 'Law Enforcement Department',
