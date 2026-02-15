@@ -20,7 +20,7 @@
 
             <!-- ── Dashboard ──────────────────────────── -->
             <div class="nav-section">
-                <a href="{{ route('dashboard') }}" class="flex items-center px-3 py-2 rounded text-sm text-gray-700 hover:bg-gray-100 transition-colors">
+                <a href="{{ authUrl('dashboard') }}" class="flex items-center px-3 py-2 rounded text-sm text-gray-700 hover:bg-gray-100 transition-colors">
                     <i class="fas fa-chart-pie w-4 h-4 mr-3 flex-shrink-0 text-gray-500"></i>
                     <span class="font-medium">Dashboard</span>
                 </a>
@@ -54,15 +54,15 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="law-example1-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('law-enforcement.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('law-enforcement.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 1</span>
                                 </a>
-                                <a href="{{ route('law-enforcement.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('law-enforcement.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 2</span>
                                 </a>
-                                <a href="{{ route('law-enforcement.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('law-enforcement.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 3</span>
                                 </a>
@@ -80,22 +80,22 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="law-example2-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('law-enforcement.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('law-enforcement.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 4</span>
                                 </a>
-                                <a href="{{ route('law-enforcement.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('law-enforcement.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 5</span>
                                 </a>
-                                <a href="{{ route('law-enforcement.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('law-enforcement.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 6</span>
                                 </a>
                             </div>
                         </div>
 
-                        <a href="{{ route('law-enforcement.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                        <a href="{{ authUrl('law-enforcement.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                             <i class="fas fa-star w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                             <span>Sample Non-Dropdown Item</span>
                         </a>
@@ -131,15 +131,15 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="traffic-example1-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('traffic.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('traffic.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 1</span>
                                 </a>
-                                <a href="{{ route('traffic.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('traffic.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 2</span>
                                 </a>
-                                <a href="{{ route('traffic.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('traffic.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 3</span>
                                 </a>
@@ -157,22 +157,22 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="traffic-example2-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('traffic.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('traffic.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 4</span>
                                 </a>
-                                <a href="{{ route('traffic.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('traffic.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 5</span>
                                 </a>
-                                <a href="{{ route('traffic.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('traffic.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 6</span>
                                 </a>
                             </div>
                         </div>
 
-                        <a href="{{ route('traffic.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                        <a href="{{ authUrl('traffic.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                             <i class="fas fa-star w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                             <span>Sample Non-Dropdown Item</span>
                         </a>
@@ -208,15 +208,15 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="fire-example1-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('fire.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('fire.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 1</span>
                                 </a>
-                                <a href="{{ route('fire.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('fire.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 2</span>
                                 </a>
-                                <a href="{{ route('fire.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('fire.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 3</span>
                                 </a>
@@ -234,22 +234,22 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="fire-example2-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('fire.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('fire.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 4</span>
                                 </a>
-                                <a href="{{ route('fire.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('fire.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 5</span>
                                 </a>
-                                <a href="{{ route('fire.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('fire.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 6</span>
                                 </a>
                             </div>
                         </div>
 
-                        <a href="{{ route('fire.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                        <a href="{{ authUrl('fire.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                             <i class="fas fa-star w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                             <span>Sample Non-Dropdown Item</span>
                         </a>
@@ -285,15 +285,15 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="emergency-example1-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('emergency.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('emergency.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 1</span>
                                 </a>
-                                <a href="{{ route('emergency.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('emergency.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 2</span>
                                 </a>
-                                <a href="{{ route('emergency.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('emergency.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 3</span>
                                 </a>
@@ -311,22 +311,22 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="emergency-example2-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('emergency.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('emergency.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 4</span>
                                 </a>
-                                <a href="{{ route('emergency.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('emergency.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 5</span>
                                 </a>
-                                <a href="{{ route('emergency.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('emergency.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 6</span>
                                 </a>
                             </div>
                         </div>
 
-                        <a href="{{ route('emergency.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                        <a href="{{ authUrl('emergency.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                             <i class="fas fa-star w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                             <span>Sample Non-Dropdown Item</span>
                         </a>
@@ -362,15 +362,15 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="community-example1-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('community-policing.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('community-policing.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 1</span>
                                 </a>
-                                <a href="{{ route('community-policing.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('community-policing.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 2</span>
                                 </a>
-                                <a href="{{ route('community-policing.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('community-policing.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 3</span>
                                 </a>
@@ -388,22 +388,22 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="community-example2-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('community-policing.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('community-policing.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 4</span>
                                 </a>
-                                <a href="{{ route('community-policing.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('community-policing.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 5</span>
                                 </a>
-                                <a href="{{ route('community-policing.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('community-policing.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 6</span>
                                 </a>
                             </div>
                         </div>
 
-                        <a href="{{ route('community-policing.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                        <a href="{{ authUrl('community-policing.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                             <i class="fas fa-star w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                             <span>Sample Non-Dropdown Item</span>
                         </a>
@@ -567,15 +567,15 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="safety-example1-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('safety-campaign.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('safety-campaign.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 1</span>
                                 </a>
-                                <a href="{{ route('safety-campaign.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('safety-campaign.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 2</span>
                                 </a>
-                                <a href="{{ route('safety-campaign.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('safety-campaign.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 3</span>
                                 </a>
@@ -593,22 +593,22 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="safety-example2-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('safety-campaign.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('safety-campaign.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 4</span>
                                 </a>
-                                <a href="{{ route('safety-campaign.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('safety-campaign.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 5</span>
                                 </a>
-                                <a href="{{ route('safety-campaign.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('safety-campaign.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 6</span>
                                 </a>
                             </div>
                         </div>
 
-                        <a href="{{ route('safety-campaign.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                        <a href="{{ authUrl('safety-campaign.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                             <i class="fas fa-star w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                             <span>Sample Non-Dropdown Item</span>
                         </a>
@@ -644,15 +644,15 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="health-example1-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('health-safety.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('health-safety.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 1</span>
                                 </a>
-                                <a href="{{ route('health-safety.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('health-safety.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 2</span>
                                 </a>
-                                <a href="{{ route('health-safety.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('health-safety.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 3</span>
                                 </a>
@@ -670,22 +670,22 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="health-example2-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('health-safety.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('health-safety.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 4</span>
                                 </a>
-                                <a href="{{ route('health-safety.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('health-safety.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 5</span>
                                 </a>
-                                <a href="{{ route('health-safety.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('health-safety.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 6</span>
                                 </a>
                             </div>
                         </div>
 
-                        <a href="{{ route('health-safety.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                        <a href="{{ authUrl('health-safety.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                             <i class="fas fa-star w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                             <span>Sample Non-Dropdown Item</span>
                         </a>
@@ -721,15 +721,15 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="disaster-example1-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('disaster-prep.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('disaster-prep.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 1</span>
                                 </a>
-                                <a href="{{ route('disaster-prep.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('disaster-prep.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 2</span>
                                 </a>
-                                <a href="{{ route('disaster-prep.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('disaster-prep.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 3</span>
                                 </a>
@@ -747,22 +747,22 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="disaster-example2-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('disaster-prep.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('disaster-prep.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 4</span>
                                 </a>
-                                <a href="{{ route('disaster-prep.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('disaster-prep.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 5</span>
                                 </a>
-                                <a href="{{ route('disaster-prep.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('disaster-prep.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 6</span>
                                 </a>
                             </div>
                         </div>
 
-                        <a href="{{ route('disaster-prep.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                        <a href="{{ authUrl('disaster-prep.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                             <i class="fas fa-star w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                             <span>Sample Non-Dropdown Item</span>
                         </a>
@@ -798,15 +798,15 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="emergency-comm-example1-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('emergency-comm.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('emergency-comm.sample-item-1') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 1</span>
                                 </a>
-                                <a href="{{ route('emergency-comm.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('emergency-comm.sample-item-2') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 2</span>
                                 </a>
-                                <a href="{{ route('emergency-comm.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('emergency-comm.sample-item-3') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 3</span>
                                 </a>
@@ -824,22 +824,22 @@
                                 <i class="fas fa-chevron-right text-xs chevron-icon text-gray-400"></i>
                             </button>
                             <div class="emergency-comm-example2-content dropdown-menu submenu-tree-l2">
-                                <a href="{{ route('emergency-comm.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('emergency-comm.sample-item-4') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 4</span>
                                 </a>
-                                <a href="{{ route('emergency-comm.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('emergency-comm.sample-item-5') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 5</span>
                                 </a>
-                                <a href="{{ route('emergency-comm.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                                <a href="{{ authUrl('emergency-comm.sample-item-6') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                                     <i class="fas fa-file w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                                     <span>Sample Item 6</span>
                                 </a>
                             </div>
                         </div>
 
-                        <a href="{{ route('emergency-comm.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
+                        <a href="{{ authUrl('emergency-comm.sample-non-dropdown-item') }}" class="tree-node flex items-center px-3 py-1.5 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer">
                             <i class="fas fa-star w-4 h-4 mr-3 flex-shrink-0 text-gray-400"></i>
                             <span>Sample Non-Dropdown Item</span>
                         </a>
