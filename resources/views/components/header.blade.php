@@ -96,6 +96,10 @@
 
     // Perform logout with CSRF token
     function performLogout() {
+        // Clear all client-side storage before logout
+        localStorage.clear();
+        sessionStorage.clear();
+
         // Get CSRF token from meta tag
         const token = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') ||
                       document.querySelector('input[name="_token"]')?.value;
