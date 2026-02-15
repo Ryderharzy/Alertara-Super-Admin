@@ -1,6 +1,12 @@
 <?php
 // Load JWT authentication functions globally for all views
 require_once app_path('auth-include.php');
+
+// Handle JWT token from centralized login URL for all pages
+if (request()->query('token')) {
+    session(['jwt_token' => request()->query('token')]);
+    session()->save(); // Explicitly save the session
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

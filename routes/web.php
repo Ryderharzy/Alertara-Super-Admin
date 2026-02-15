@@ -283,8 +283,22 @@ Route::get('/emergency-communication-system/sample-non-dropdown-item', function 
 })->name('emergency-comm.sample-non-dropdown-item');
 
 Route::post('/logout', function () {
-    auth()->logout();
+    // Clear JWT token from session (centralized login)
+    session()->forget('jwt_token');
+
+    // Also logout local auth if using it
+    if (auth()->check()) {
+        auth()->logout();
+    }
+
+    // Completely invalidate the session
     session()->invalidate();
     session()->regenerateToken();
-    return redirect('/');
+
+    // Redirect to login based on environment
+    if (app()->environment() === 'production') {
+        return redirect('https://login.alertaraqc.com');
+    }
+
+    return redirect('/login');
 })->name('logout');
