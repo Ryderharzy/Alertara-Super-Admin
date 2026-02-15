@@ -6,6 +6,7 @@ use App\Models\CrimeIncident;
 use App\Models\Barangay;
 use App\Models\CrimeCategory;
 use App\Models\CrimeAlert;
+use App\Services\AuthService;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
@@ -43,13 +44,13 @@ class DashboardController extends Controller
         $userRole = '';
         $userDepartment = '';
         $departmentName = '';
-        
+
         if ($environment === 'local') {
             // Use Laravel's built-in authentication in local environment
             if (!auth()->check()) {
                 return null;
             }
-            
+
             $currentUser = auth()->user();
             $userEmail = $currentUser->email ?? '';
             $userRole = $currentUser->role ?? 'user';
@@ -57,18 +58,19 @@ class DashboardController extends Controller
             $departmentName = ucfirst($userDepartment) . ' Department';
         } else {
             // Use JWT authentication in production
-            $currentUser = getCurrentUser();
-            
+            // Validate the JWT token via API
+            $currentUser = AuthService::validateToken();
+
             if (!$currentUser) {
                 return null;
             }
-            
-            $userEmail = getUserEmail();
-            $userRole = getUserRole();
-            $userDepartment = getUserDepartment();
-            $departmentName = getDepartmentName();
+
+            $userEmail = $currentUser['email'] ?? '';
+            $userRole = $currentUser['role'] ?? 'user';
+            $userDepartment = $currentUser['department'] ?? '';
+            $departmentName = $currentUser['department_name'] ?? ucfirst(str_replace('_', ' ', $userDepartment));
         }
-        
+
         return [
             'currentUser' => $currentUser,
             'userEmail' => $userEmail,
