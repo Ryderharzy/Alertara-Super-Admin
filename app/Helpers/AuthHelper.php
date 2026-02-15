@@ -1,79 +1,95 @@
 <?php
 
-namespace App\Helpers;
-
-use App\Services\AuthService;
-
 if (!function_exists('getCurrentUser')) {
     function getCurrentUser()
     {
-        return AuthService::getCurrentUser();
+        return session('auth_user') ?? null;
     }
 }
 
 if (!function_exists('getUserEmail')) {
     function getUserEmail()
     {
-        return AuthService::getUserEmail();
+        return session('auth_user.email') ?? null;
     }
 }
 
 if (!function_exists('getUserRole')) {
     function getUserRole()
     {
-        return AuthService::getUserRole();
+        return session('auth_user.role') ?? null;
     }
 }
 
 if (!function_exists('getUserDepartment')) {
     function getUserDepartment()
     {
-        return AuthService::getUserDepartment();
+        return session('auth_user.department') ?? null;
     }
 }
 
 if (!function_exists('getDepartmentName')) {
     function getDepartmentName($dept = null)
     {
-        return AuthService::getDepartmentName($dept);
+        if ($dept === null) {
+            return session('auth_user.department_name') ?? null;
+        }
+        return $dept;
     }
 }
 
 if (!function_exists('isSuperAdmin')) {
     function isSuperAdmin()
     {
-        return AuthService::isSuperAdmin();
+        return session('auth_user.role') === 'super_admin';
     }
 }
 
 if (!function_exists('isAdmin')) {
     function isAdmin()
     {
-        return AuthService::isAdmin();
+        return in_array(session('auth_user.role'), ['super_admin', 'admin']);
     }
 }
 
 if (!function_exists('isAuthenticated')) {
     function isAuthenticated()
     {
-        return AuthService::isAuthenticated();
+        return session('auth_user') !== null;
     }
 }
 
 if (!function_exists('authUrl')) {
     /**
-     * Generate URL for authenticated pages with JWT token
+     * Generate URL for authenticated pages
      */
     function authUrl($routeName, $parameters = [])
     {
-        $url = route($routeName, $parameters);
-        $token = session('jwt_token');
+        return route($routeName, $parameters);
+    }
+}
 
-        if ($token) {
-            $separator = strpos($url, '?') !== false ? '&' : '?';
-            $url .= $separator . 'token=' . urlencode($token);
+if (!function_exists('getTokenRefreshScript')) {
+    /**
+     * Get token refresh script for JWT management
+     */
+    function getTokenRefreshScript()
+    {
+        $token = session('jwt_token');
+        if (!$token) {
+            return '';
         }
 
-        return $url;
+        return '<script>
+            // Token management for JWT authentication
+            document.addEventListener("DOMContentLoaded", function() {
+                // Add token to all AJAX requests
+                $.ajaxSetup({
+                    headers: {
+                        "Authorization": "Bearer ' . $token . '"
+                    }
+                });
+            });
+        </script>';
     }
 }

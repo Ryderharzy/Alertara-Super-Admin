@@ -4,11 +4,17 @@ use App\Services\AuthService;
 // Handle JWT token from centralized login URL for all pages
 if (request()->query('token')) {
     session(['jwt_token' => request()->query('token')]);
-    session()->save(); // Explicitly save the session
+    session()->save();
 }
 
 // Validate user token via API
 $currentUser = AuthService::validateToken(session('jwt_token'));
+
+// Store user data in session for helper functions
+if ($currentUser) {
+    session(['auth_user' => $currentUser]);
+    session()->save();
+}
 
 // Share user data with all views
 view()->share('currentUser', $currentUser);
