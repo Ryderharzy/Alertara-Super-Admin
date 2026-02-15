@@ -72,6 +72,7 @@ if (!function_exists('authUrl')) {
 if (!function_exists('getTokenRefreshScript')) {
     /**
      * Get token refresh script for JWT management
+     * Note: Token is NOT exposed here anymore - it's managed server-side via session
      */
     function getTokenRefreshScript()
     {
@@ -80,16 +81,8 @@ if (!function_exists('getTokenRefreshScript')) {
             return '';
         }
 
-        return '<script>
-            // Token management for JWT authentication
-            document.addEventListener("DOMContentLoaded", function() {
-                // Add token to all AJAX requests
-                $.ajaxSetup({
-                    headers: {
-                        "Authorization": "Bearer ' . $token . '"
-                    }
-                });
-            });
-        </script>';
+        // Token is stored in session only, not exposed in HTML
+        // Server-side authentication handles authorization via session
+        return '';
     }
 }

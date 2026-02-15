@@ -81,8 +81,17 @@ class DashboardController extends Controller
         ];
     }
     
-    public function index()
+    public function index(Request $request)
     {
+        // If token is in query parameter, store it and redirect without the token
+        if ($request->query('token')) {
+            session(['jwt_token' => $request->query('token')]);
+            session()->save();
+
+            // Redirect to clean URL without the token parameter
+            return redirect()->route('dashboard');
+        }
+
         // Get authenticated user data
         $authData = $this->getAuthUser();
         if (!$authData) {

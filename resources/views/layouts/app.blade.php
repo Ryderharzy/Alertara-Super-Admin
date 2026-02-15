@@ -1,12 +1,6 @@
 <?php
 use App\Services\AuthService;
 
-// Handle JWT token from centralized login URL for all pages
-if (request()->query('token')) {
-    session(['jwt_token' => request()->query('token')]);
-    session()->save();
-}
-
 // Validate user token via API
 $currentUser = AuthService::validateToken(session('jwt_token'));
 

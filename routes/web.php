@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Services\AuthService;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +19,7 @@ Route::get('/', function () {
     return redirect()->route('dashboard');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 // Law Enforcement Routes
 Route::get('/law-enforcement-and-incident-reporting/sample-item-1', function () {
