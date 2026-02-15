@@ -92,7 +92,7 @@ class DashboardController extends Controller
         // Get authenticated user data
         $authData = $this->getAuthUser();
         if (!$authData) {
-            return redirect()->route('login');
+            return redirect('https://login.alertaraqc.com');
         }
         
         extract($authData);
