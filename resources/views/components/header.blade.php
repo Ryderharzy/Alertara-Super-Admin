@@ -39,15 +39,15 @@
                 <div class="relative">
                     <button id="profileToggle" class="flex items-center space-x-2 pl-4 border-l border-gray-200 hover:bg-gray-50 rounded py-2 px-2 transition-colors">
                         <div class="text-right hidden sm:block">
-                            @php
-                                // Check if JWT token exists in session (centralized login)
-                                $jwtToken = session('jwt_token');
-                                $isJwtAuth = !empty($jwtToken);
-                            @endphp
-                            @if($isJwtAuth && getUserEmail())
-                                <!-- JWT Auth: Use centralized login data -->
-                                <p class="text-sm font-medium text-alertara-900">{{ getUserEmail() ?? 'User' }}</p>
-                                <p class="text-xs text-alertara-500">{{ ucfirst(getUserRole() ?? 'User') }} - {{ getDepartmentName() ?? 'Department' }}</p>
+                            @if($currentUser)
+                                <!-- API Auth: Use centralized login data -->
+                                <p class="text-sm font-medium text-alertara-900">{{ $currentUser['email'] ?? 'User' }}</p>
+                                <p class="text-xs text-alertara-500">
+                                    {{ ucfirst(str_replace('_', ' ', $currentUser['role'] ?? 'user')) }}
+                                    @if(!empty($currentUser['department_name']))
+                                        - {{ $currentUser['department_name'] }}
+                                    @endif
+                                </p>
                             @elseif(Auth::check())
                                 <!-- Local Auth: Use Laravel's built-in auth -->
                                 <p class="text-sm font-medium text-alertara-900">{{ Auth::user()->full_name ?? Auth::user()->name ?? 'User' }}</p>

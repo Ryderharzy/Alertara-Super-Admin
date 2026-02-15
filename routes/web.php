@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Services\AuthService;
 
 /*
 |--------------------------------------------------------------------------
@@ -283,40 +284,8 @@ Route::get('/emergency-communication-system/sample-non-dropdown-item', function 
 })->name('emergency-comm.sample-non-dropdown-item');
 
 Route::post('/logout', function () {
-    // Get current user info before clearing session
-    $userId = auth()->check() ? auth()->user()->id : null;
-    $jwtToken = session('jwt_token');
-
-    // If JWT auth, try to get user ID from token
-    if (!$userId && $jwtToken) {
-        try {
-            $payload = \Tymon\JWTAuth\Facades\JWTAuth::setToken($jwtToken)->getPayload();
-            $userId = $payload->get('sub') ?? null;
-        } catch (\Exception $e) {
-            // Token might be invalid
-        }
-    }
-
-    // Store logout timestamp in cache so we can reject tokens issued before logout
-    if ($userId) {
-        \Illuminate\Support\Facades\Cache::put('user_logout_' . $userId, time(), 86400 * 7); // 7 days
-    }
-
-    // Mark user as logged out before invalidating session
-    session(['user_logged_out' => true]);
-    session()->save();
-
-    // Clear JWT token from session (centralized login)
-    session()->forget('jwt_token');
-
-    // Also logout local auth if using it
-    if (auth()->check()) {
-        auth()->logout();
-    }
-
-    // Completely invalidate the session
-    session()->invalidate();
-    session()->regenerateToken();
+    // Use AuthService to logout
+    AuthService::logout();
 
     // Redirect to login based on environment
     if (app()->environment() === 'production') {

@@ -1,11 +1,23 @@
 <?php
-// Load JWT authentication functions globally for all views
-require_once app_path('auth-include.php');
+use App\Services\AuthService;
 
 // Handle JWT token from centralized login URL for all pages
 if (request()->query('token')) {
     session(['jwt_token' => request()->query('token')]);
     session()->save(); // Explicitly save the session
+}
+
+// Validate user token via API
+$currentUser = AuthService::validateToken(session('jwt_token'));
+
+// Share user data with all views
+view()->share('currentUser', $currentUser);
+
+// Redirect to login if not authenticated
+if (!$currentUser && request()->path() !== '/') {
+    $loginUrl = app()->environment() === 'production' ? 'https://login.alertaraqc.com' : '/login';
+    header('Location: ' . $loginUrl);
+    exit;
 }
 ?>
 <!DOCTYPE html>
